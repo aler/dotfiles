@@ -1,3 +1,6 @@
 . ~/repos/dotfiles/bash/env
 . ~/repos/dotfiles/bash/config
 . ~/repos/dotfiles/bash/aliases
+
+#source scripts
+. ~/repos/dotfiles/bash/scripts/*
