@@ -1,9 +1,9 @@
 # Command Enhancements
 
 # Utility
-alias reload='source ~/bin/dotfiles/bash/aliases'
-alias ea='mate -w ~/bin/dotfiles/bash/aliases && reload' # Edit aliases
-alias ee="mate ~/bin/dotfiles/bash/env"
+alias reload='source ~/repos/dotfiles/bash/aliases'
+alias ea='mate ~/repos/dotfiles/bash/aliases && reload' # Edit aliases
+alias ee="mate ~/repos/dotfiles/bash/env"
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
