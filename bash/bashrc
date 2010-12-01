@@ -2,5 +2,8 @@
 . ~/repos/dotfiles/bash/config
 . ~/repos/dotfiles/bash/aliases
 
+#load rvm cmd
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 #source scripts
 . ~/repos/dotfiles/bash/scripts/*
