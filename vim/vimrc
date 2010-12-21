@@ -2,7 +2,7 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 " init pathogen plugin
-silent! call pathogen#runtimeappendall_bundles()
+call pathogen#runtime_append_all_bundles()
 
 set nocompatible                  " Must come first because it changes other options.
 
