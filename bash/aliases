@@ -2,8 +2,8 @@
 
 # Utility
 alias reload='source ~/repos/dotfiles/bash/env && source ~/repos/dotfiles/bash/aliases'
-alias ea='mvim ~/repos/dotfiles/bash/aliases && reload'
-alias ee='mvim ~/repos/dotfiles/bash/env && reload'
+alias ea='vim ~/repos/dotfiles/bash/aliases && reload'
+alias ee='vim ~/repos/dotfiles/bash/env && reload'
 
 # Quicker cd
 alias cg='cd /Library/Ruby/Gems/1.8/gems/'
