@@ -41,6 +41,10 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+set listchars=tab:▸\ ,eol:¬        " Use the same symbols as TextMate for tabstops and EOLs
+highlight NonText guifg=#4a4a59    " colors for invisible chars like tab and new line
+highlight SpecialKey guifg=#4a4a59 " colors for invisible chars like tab and new line
+
 set tabstop=4                    " Specify the width of the tab character
 set expandtab                    " Use spaces instead of tabs
 set softtabstop=4		 " How many spaces inserted when hit tab in insert mode
@@ -63,6 +67,9 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+" Toggle invisibles on/off
+map <leader>l :set list!<cr>
 
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
