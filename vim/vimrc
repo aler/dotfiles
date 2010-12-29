@@ -42,12 +42,10 @@ set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set listchars=tab:▸\ ,eol:¬        " Use the same symbols as TextMate for tabstops and EOLs
-highlight NonText guifg=#4a4a59    " colors for invisible chars like tab and new line
-highlight SpecialKey guifg=#4a4a59 " colors for invisible chars like tab and new line
 
 set tabstop=4                    " Specify the width of the tab character
 set expandtab                    " Use spaces instead of tabs
-set softtabstop=4		 " How many spaces inserted when hit tab in insert mode
+set softtabstop=4                " How many spaces inserted when hit tab in insert mode
 set shiftwidth=4                 " How many spaces inserted using indentation commands in normal mode
 
 set laststatus=2                  " Show the status line all the time

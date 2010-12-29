@@ -53,6 +53,9 @@ highlight StatusLineNC ctermfg=Black  ctermbg=Grey cterm=NONE
 
 highlight FoldColumn	ctermbg=Black		ctermfg=White cterm=bold
 
+highlight NonText guifg=#4a4a59    " colors for invisible chars like tab and new line
+highlight SpecialKey guifg=#4a4a59 " colors for invisible chars like tab and new line
+
 " only for vim 5
 if has("unix")
   if v:version<600
