@@ -55,6 +55,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " Or use vividchalk
 colorscheme motus
 
+" Remap leader to ,
+let mapleader = ","
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -72,12 +75,15 @@ map <leader>l :set list!<cr>
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
+" Open erl inside Vim
+map <leader>e :ConqueTerm erl<cr>
 
-"vnoremap ; :
-"vnoremap : ;
+" Controversial...swap colon and semicolon for easier commands
+" nnoremap ; :
+" nnoremap : ;
+" 
+" vnoremap ; :
+" vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
