@@ -16,7 +16,7 @@ set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
-set hidden                        " Handle multiple buffers better.
+set hidden                        " Auto create hidden buffers (no bang needed)
 
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete files like a shell.
@@ -68,6 +68,17 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+" Edit mapping (open file in the save dir as current file)
+" open file in the current window
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+" open file in horizontal split
+map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
+" open file in vertical split
+map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+" open file in the new tab
+map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
 
 " Toggle invisibles on/off
 map <leader>l :set list!<cr>
