@@ -100,8 +100,11 @@ map <leader>l :set list!<cr>
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
 
-" Open erl inside Vim
-map <leader>e :ConqueTerm erl<cr>
+" Erlang Mappings
+
+map <leader>el :ConqueTerm erl<cr>
+map <leader>ec :w\|!./rebar compile<cr>
+map <leader>es :w\|!espec %<cr>
 
 " Controversial...swap colon and semicolon for easier commands
 " nnoremap ; :
