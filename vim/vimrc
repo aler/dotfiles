@@ -53,7 +53,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
-colorscheme motus
+colorscheme blackboard
 
 " Remap leader to ,
 let mapleader = ","
@@ -92,6 +92,13 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 " open file in the new tab
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" Source the vimrc file after saving it
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+" Open vimrc file
+map <leader>v :tabedit $MYVIMRC<CR>
 
 
 " Toggle invisibles on/off
