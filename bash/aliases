@@ -86,6 +86,8 @@ alias gst='git status'
 alias gt='git status'
 alias g='git status'
 alias eg='mate .git/config'
+# remove all untracked files and files in .gitignore
+alias gcl='git clean -d -x -f .'
 
 # Git clone from GitHub
 function gch() {
