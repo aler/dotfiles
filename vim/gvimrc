@@ -10,4 +10,16 @@ set lines=35 columns=120          " Window dimensions.
 " Uncomment to use.
 set guioptions-=r                 " Don't show right scrollbar
 
-
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Courier\ New\ 11
+    elseif has("gui_photon")
+        set guifont=Courier\ New:s11
+    elseif has("gui_kde")
+        set guifont=Courier\ New/11/-1/5/50/0/0/0/1/0
+    elseif has("x11")
+        set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+    else
+        set guifont=Courier_New:h11:cDEFAULT
+    endif
+endif
