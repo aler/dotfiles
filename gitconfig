@@ -1,0 +1,22 @@
+[core]
+    editor = vim
+
+[http]
+	proxy = 
+
+[user]
+	name = Alex Rudyk
+	email = alex.rudyk@gmail.com
+
+[diff]
+    tool = gitdifftool
+ 
+[difftool "gitdifftool"]
+    cmd = gitdifftool.sh $LOCAL $REMOTE
+
+[difftool]
+    prompt = false
+
+[alias]
+    dt = difftool
+
