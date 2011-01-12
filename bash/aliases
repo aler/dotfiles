@@ -76,7 +76,6 @@ function gg() {
     git commit -v -a -m "$*"
 }
 alias gco='git checkout'
-alias gd='git diff'
 alias gdm='git diff master'
 alias gl='git pull'
 alias gnp="git-notpushed"
@@ -111,6 +110,10 @@ function new-git() {
   git config branch.master.remote origin
   git config branch.master.merge refs/heads/master
   git config push.default current
+}
+
+function gd() {
+  git diff --no-ext-diff -w "$@" | mvim -R -
 }
 
 # Text editing

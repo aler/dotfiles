@@ -113,7 +113,7 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 " Erlang Mappings
 
 map <leader>el :ConqueTerm erl<cr>
-map <leader>ec :w\|!./rebar compile<cr>
+map <leader>ec :w\|!erlc -o ./ebin src/*.erl<cr>
 map <leader>es :w\|!espec %<cr>
 
 " Remap the tab key to do autocompletion or indentation depending on the
