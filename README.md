@@ -18,6 +18,9 @@ How to install
     cd repos/dotfiles
     git submodule init
     git submodule update
+    cd vim/bundle/vimproc
+    make -f make_mac.mak
+    cp -r autoload/* ~/repos/dofiles/vim/autoload
     cd
 
 	#vcprompt
