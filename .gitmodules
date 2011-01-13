@@ -13,3 +13,15 @@
 [submodule "vim/bundle/tcomment_vim"]
 	path = vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "vim/bundle/repl.vim"]
+	path = vim/bundle/repl.vim
+	url = https://github.com/mrdaemon/repl.vim.git
+[submodule "vim/bundle/quickrun"]
+	path = vim/bundle/quickrun
+	url = https://github.com/ujihisa/quickrun.git
+[submodule "vim/bundle/vimshell"]
+	path = vim/bundle/vimshell
+	url = https://github.com/Shougo/vimshell.git
+[submodule "vim/bundle/vimproc"]
+	path = vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
