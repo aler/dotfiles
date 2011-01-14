@@ -103,6 +103,10 @@ endif
 " Open vimrc file
 map <leader>v :tabedit $MYVIMRC<CR>
 
+" Window mappings
+map <leader>ww <C-w>w
+map <leader>wo <C-w>o
+map <leader>f  <C-^>
 
 " Toggle invisibles on/off
 map <leader>l :set list!<cr>
@@ -112,7 +116,7 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 
 " Erlang Mappings
 
-map <leader>ec :w\|!erlc -o ./ebin src/*.erl<cr>
+map <leader>ec :wa\|!erlc -o ./ebin src/*.erl<cr>
 map <leader>es :w\|!espec %<cr>
 map <leader>er :Repl<cr>
 
