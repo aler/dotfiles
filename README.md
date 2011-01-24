@@ -18,6 +18,7 @@ How to install
     cd repos/dotfiles
     git submodule init
     git submodule update
+    mv vim/bundle/snipmate.vim/snippets vim/bundle/snipmate.vim/original-snippets
     cd vim/bundle/vimproc
     make -f make_mac.mak
     cp -r autoload/* ~/repos/dofiles/vim/autoload

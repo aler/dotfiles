@@ -33,7 +33,7 @@
 	url = https://github.com/msanders/snipmate.vim.git
 [submodule "vim/snippets"]
 	path = vim/snippets
-	url = https://github.com/scrooloose/snipmate-snippets.git
+	url = https://github.com/aler/snipmate-snippets.git
 [submodule "vim/bundle/vim-cucumber"]
 	path = vim/bundle/vim-cucumber
 	url = https://github.com/tpope/vim-cucumber.git
