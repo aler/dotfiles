@@ -61,6 +61,9 @@ colorscheme blackboard
 " Remap leader to ,
 let mapleader = ","
 
+" autosave all when focus lost
+:au FocusLost * :wa
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -139,6 +142,11 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+if has('unix')
+        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+endif
+
 
 " Controversial...swap colon and semicolon for easier commands
 " nnoremap ; :
