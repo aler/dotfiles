@@ -116,6 +116,10 @@ function gd() {
   git diff --no-ext-diff -w "$@" | mvim -R -
 }
 
+function gdx() {
+  git diff --no-ext-diff -w "$@" | gitx
+}
+
 # Text editing
 # Emacs
 alias em="open -a Emacs"
@@ -139,15 +143,10 @@ function markdown() {
 }
 
 # Rails
-alias mr='mongrel_rails start'
-alias ms='mongrel_rails stop'
-alias rp='touch tmp/restart.txt'
-alias sc='./script/console'
-alias sg='./script/generate'
-alias sp='./script/plugin'
-alias ss='./script/server'
-alias tl='tail -f log/*.log'
-alias ts='thin start'
+alias rs="bundle exec rails server thin"
+alias rc="bundle exec rails console"
+alias rg="bundle exec rails generate"
+alias cw="cucumber -p wip"
 
 # TDD / BDD
 
