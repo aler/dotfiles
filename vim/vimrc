@@ -3,13 +3,12 @@
 
 " init pathogen plugin
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 set nocompatible                  " Must come first because it changes other options.
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
-
-runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -46,10 +45,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 set listchars=tab:▸\ ,eol:¬        " Use the same symbols as TextMate for tabstops and EOLs
 
-set tabstop=4                    " Specify the width of the tab character
+set tabstop=2                    " Specify the width of the tab character
 set expandtab                    " Use spaces instead of tabs
-set softtabstop=4                " How many spaces inserted when hit tab in insert mode
-set shiftwidth=4                 " How many spaces inserted using indentation commands in normal mode
+set softtabstop=2                " How many spaces inserted when hit tab in insert mode
+set shiftwidth=2                 " How many spaces inserted using indentation commands in normal mode
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
@@ -63,41 +62,6 @@ let mapleader = ","
 
 " autosave all when focus lost
 :au FocusLost * :wa
-
-" Tab mappings.
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-map <leader>tm :tabmove
-" Firefox style tab navigation
-" For mac users (using the 'apple' key)
-map <D-S-]> gt
-map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
-
-" Edit mapping (open file in the save dir as current file)
-" open file in the current window
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
-" open file in horizontal split
-map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
-" open file in vertical split
-map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
-" open file in the new tab
-map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Source the vimrc file after saving it
 if has("autocmd")
@@ -114,21 +78,10 @@ map <leader>f  <C-^>
 " Toggle invisibles on/off
 map <leader>l :set list!<cr>
 
-" Uncomment to use Jamis Buck's file opening plugin
-map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" Snipmate plugin settings
-
-" Setting the author var
+" Snipmate setting the author var
 let g:snips_author = 'Alex Rudyk <alex.rudyk@gmail.com>'
 " Shortcut for reloading snippets, useful when developing
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
-
-" Erlang Mappings
-
-map <leader>ec :wa\|!erlc -o ./ebin src/*.erl<cr>
-map <leader>es :w\|!espec %<cr>
-map <leader>er :Repl<cr>
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context (from http://www.vim.org/tips/tip.php?tip_id=102)
@@ -144,7 +97,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 if has('unix')
-        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 endif
 
 
