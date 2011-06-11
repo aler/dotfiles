@@ -1,0 +1,3 @@
+[submodule "vim/bundle/matchit"]
+	path = vim/bundle/matchit
+	url = https://github.com/edsono/vim-matchit.git
