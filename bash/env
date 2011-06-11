@@ -1,8 +1,2 @@
-export PATH=~/bin:~/local/bin:/opt/local/bin:$PATH
-export EDITOR='~/bin/mvim'
-
-if [ $OSTYPE == "darwin10.0" ]; then
-    export ERL_LIBS='/Users/alex/Library/erlang/lib'
-else
-    export ERL_LIBS='/home/alex/Library/erlang/lib'
-fi
+export PATH=~/bin:~/node_modules/.bin:$PATH
+export EDITOR='vim'
