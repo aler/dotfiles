@@ -1,10 +1,10 @@
 How to install
 ==============
 
-  mkdir ~/repos
-  cd ~/repos
-  git clone git://github.com/aler/dotfiles.git
-  cd
+    mkdir ~/repos
+    cd ~/repos
+    git clone git://github.com/aler/dotfiles.git
+    cd
 
 ln -nfs repos/dotfiles/bash/bashrc .bashrc
 ln -nfs repos/dotfiles/bash/bash_profile .bash_profile
