@@ -78,6 +78,11 @@ map <leader>f  <C-^>
 " Toggle invisibles on/off
 map <leader>l :set list!<cr>
 
+" CoffeeScript mappings
+" autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+nmap <leader>cc :w\|:CoffeeMake!<cr>
+nmap <leader>cr :w\|:CoffeeRun<cr>
+
 " Snipmate setting the author var
 let g:snips_author = 'Alex Rudyk <alex.rudyk@gmail.com>'
 " Shortcut for reloading snippets, useful when developing
