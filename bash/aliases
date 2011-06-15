@@ -13,6 +13,13 @@ function cr() {
  cd ~/repos/$*
 }
 
+# job control
+function f() {
+  fg %?$1
+}
+
+alias stop="kill -STOP"
+
 # Common -- Some are from Damian Conway
 alias v='mvim'
 alias t='tree .'
@@ -49,6 +56,9 @@ function killnamed () {
 function zipr() {
   zip -r $1.zip $1
 }
+
+# Show all opened ports
+alias ports='lsof -i -P | grep -i "listen"'
 
 # Finder
 alias o='open . &'
