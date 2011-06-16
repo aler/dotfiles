@@ -17,7 +17,8 @@ function cr() {
 function f() {
   fg %?$1
 }
-
+alias j="jobs"
+alias z="suspend"
 alias stop="kill -STOP"
 
 # Common -- Some are from Damian Conway
