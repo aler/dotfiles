@@ -14,9 +14,17 @@ function cr() {
 }
 
 # job control
+
+# take job to foreground by name
 function f() {
   fg %?$1
 }
+
+# find process
+function pf() {
+  ps aux | grep $1
+}
+
 alias j="jobs"
 alias z="suspend"
 alias stop="kill -STOP"
@@ -35,7 +43,7 @@ function cdc() {
 alias cls='clear; ls'
 alias h='history'
 alias l.='ls -d .[^.]*'
-alias l='ls -lhGt'  # -l long listing, most recent first
+alias l='ls -lhG --color --group-directories-first'
                     # -G color
 alias lh="ls -lh"
 alias ll='ls -lhG'  # -l long listing, human readable, no group info
@@ -64,6 +72,9 @@ alias ports='lsof -i -P | grep -i "listen"'
 # Finder
 alias o='open . &'
 alias ff='open -a Firefox'
+
+# CoffeeScript
+alias cf='coffee'
 
 # General code
 
@@ -130,6 +141,12 @@ function gd() {
 function gdx() {
   git diff --no-ext-diff -w "$@" | gitx
 }
+
+# Redis
+alias rs="redis-server >logs/redis.log 2>&1 &"
+
+# CoffeeScript
+alias cf="coffee"
 
 # Text editing
 # Emacs
