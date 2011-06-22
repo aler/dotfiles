@@ -38,5 +38,5 @@
 	path = vim/bundle/bufexplorer
 	url = https://github.com/slack/vim-bufexplorer.git
 [submodule "vim/tcomment"]
-	path = vim/tcomment
+	path = vim/bundle/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
