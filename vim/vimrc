@@ -104,11 +104,6 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-if has('unix')
-   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-endif
-
-
 " Controversial...swap colon and semicolon for easier commands
 " nnoremap ; :
 " nnoremap : ;

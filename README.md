@@ -12,6 +12,7 @@ How to install
     ln -nfs repos/dotfiles/vim/gvimrc .gvimrc
     ln -nfs repos/dotfiles/vim .vim
     ln -nfs repos/dotfiles/gitconfig .gitconfig
+    ln -nfs repos/dotfiles/ackrc .ackrc
     ln -nfs repos/snippets .vim/snippets
 
     brew install ack
