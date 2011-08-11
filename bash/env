@@ -1,3 +1,4 @@
 export PATH=~/bin:/usr/local/bin:$PATH
 export NODE_PATH=/usr/local/lib/node_modules
+export LD_LIBRARY_PATH=/usr/local/lib
 export EDITOR='vim'
