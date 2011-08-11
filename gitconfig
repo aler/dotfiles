@@ -1,22 +1,24 @@
 [core]
-    editor = "mvim -f"
+  editor = "mvim -f"
 
 [http]
-	proxy = 
+  proxy = 
 
 [user]
-	name = Alex Rudyk
-	email = alex.rudyk@gmail.com
+  name = Alex Rudyk
+  email = alex.rudyk@gmail.com
 
 [diff]
-    tool = gitdifftool
+  tool = gitdifftool
  
 [difftool "gitdifftool"]
-    cmd = gitdifftool.sh $LOCAL $REMOTE
+  cmd = gitdifftool.sh $LOCAL $REMOTE
 
 [difftool]
-    prompt = false
+  prompt = false
 
 [alias]
-    dt = difftool
+  dt = difftool
 
+[github]
+  user = aler
