@@ -54,8 +54,6 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-set wildignore+=node_modules/**,.git
-
 " Or use vividchalk
 colorscheme blackboard
 
@@ -90,6 +88,7 @@ map <leader>l :set list!<cr>
 noremap <leader>t  <Esc>:CommandT<CR>
 noremap <leader>T  <Esc>:CommandTFlush<CR>
 noremap <leader>te <Esc>:CommandTBuffer<CR>
+set wildignore+=node_modules/**,.git          " ignore node_modules and .git directories
 
 " CloseTag
 autocmd FileType html,erb let b:closetag_html_style=1
@@ -97,6 +96,10 @@ autocmd FileType html,xhtml,xml,erb source ~/.vim/bundle/closetag/plugin/closeta
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
+
+" TagBar
+let g:tagbar_usearrows = 1
+nnoremap <leader>tb :TagbarToggle<CR>
 
 " CoffeeScript 
 nmap <leader>cm :w\|:CoffeeMake!<cr>
@@ -107,25 +110,6 @@ nmap <leader>cc :w\|:CoffeeCompile<cr>
 let g:snips_author = 'Alex Rudyk <alex.rudyk@gmail.com>'
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
 
-" Remap the tab key to do autocompletion or indentation depending on the
-" context (from http://www.vim.org/tips/tip.php?tip_id=102)
-" function! InsertTabWrapper()
-"     let col = col('.') - 1
-"     if !col || getline('.')[col - 1] !~ '\k'
-"         return "\<tab>"
-"     else
-"         return "\<c-p>"
-"     endif
-" endfunction
-" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-" inoremap <s-tab> <c-n>
-
-" Controversial...swap colon and semicolon for easier commands
-" nnoremap ; :
-" nnoremap : ;
-" 
-" vnoremap ; :
-" vnoremap : ;
 
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
