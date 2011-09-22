@@ -34,9 +34,21 @@
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/bufexplorer"]
-	path = vim/bundle/bufexplorer
-	url = https://github.com/slack/vim-bufexplorer.git
-[submodule "vim/tcomment"]
-	path = vim/bundle/tcomment
-	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/delmitmate"]
+	path = bundle/delmitmate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/delmitmate"]
+	path = vim/bundle/delmitmate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/closetag"]
+	path = vim/bundle/closetag
+	url = git://github.com/docunext/closetag.vim.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git

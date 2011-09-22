@@ -9,5 +9,5 @@ set guioptions-=T                 " Hide toolbar.
 set guioptions-=r                 " Don't show right scrollbar
 set guioptions-=L                 " Hide left scrollbar
 
-set lines=43
-set columns=182
+set lines=40
+set columns=140

@@ -73,36 +73,52 @@ endif
 map <leader>v :tabedit $MYVIMRC<CR>
 
 " Window mappings
+" move to the next window
 map <leader>ww <C-w>w
+" close all other windows
 map <leader>wo <C-w>o
 map <leader>f  <C-^>
 
 " Toggle invisibles on/off
 map <leader>l :set list!<cr>
 
-" CoffeeScript mappings
-" autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow
+"
+" Plugins Settings
+"
+
+" CommandT
+noremap <leader>t  <Esc>:CommandT<CR>
+noremap <leader>T  <Esc>:CommandTFlush<CR>
+noremap <leader>te <Esc>:CommandTBuffer<CR>
+
+" CloseTag
+autocmd FileType html,erb let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,erb source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
+" CoffeeScript 
 nmap <leader>cm :w\|:CoffeeMake!<cr>
 nmap <leader>cr :w\|:CoffeeRun<cr>
 nmap <leader>cc :w\|:CoffeeCompile<cr>
 
-" Snipmate setting the author var
+" Snipmate
 let g:snips_author = 'Alex Rudyk <alex.rudyk@gmail.com>'
-" Shortcut for reloading snippets, useful when developing
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
 
 " Remap the tab key to do autocompletion or indentation depending on the
 " context (from http://www.vim.org/tips/tip.php?tip_id=102)
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+" function! InsertTabWrapper()
+"     let col = col('.') - 1
+"     if !col || getline('.')[col - 1] !~ '\k'
+"         return "\<tab>"
+"     else
+"         return "\<c-p>"
+"     endif
+" endfunction
+" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+" inoremap <s-tab> <c-n>
 
 " Controversial...swap colon and semicolon for easier commands
 " nnoremap ; :
