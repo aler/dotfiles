@@ -99,7 +99,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " TagBar
 let g:tagbar_usearrows = 1
-nnoremap <leader>tb :TagbarToggle<CR>
+"nnoremap <leader>tb :TagbarToggle<CR>
 
 " CoffeeScript 
 nmap <leader>cm :w\|:CoffeeMake!<cr>
@@ -107,6 +107,7 @@ nmap <leader>cr :w\|:CoffeeRun<cr>
 nmap <leader>cc :w\|:CoffeeCompile<cr>
 
 " Snipmate
+let g:snippets_dir = '/Users/alex/repos/snippets'
 let g:snips_author = 'Alex Rudyk <alex.rudyk@gmail.com>'
 nnoremap <leader>smr <esc>:exec ReloadAllSnippets()<cr>
 
